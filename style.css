@@ -1,0 +1,312 @@
+/* Reset & Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins' , sans-serif;
+    background-color: #fdfbf7;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/*1. Header / Navbar Styles */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+
+    /* kuasha effect */
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a2e35;
+}
+
+.logo-text > div{
+    display: flex;
+    flex-direction: column;
+    color: #6f3f4b;
+}
+
+.logo img {
+    height: 60px;
+    mix-blend-mode: multiply; /* to remove the white background of the logo image */
+}
+
+.tagline {
+    font-size: 13px;
+    color: #9a6872;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* hover korle underline ashbe */
+.nav-links a:hover {
+    color: #8c4a5c;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* home link er niche sobomoy underline */
+.nav-links a.active {
+    color: #8c4a5c;
+    text-decoration: underline;
+    text-underline-offset: 6px; /* likha theke underline ektu boro hbe */
+}
+
+/* 2. Hero Section */
+
+.hero {
+   background-image: url('images/All-cosmatics-together.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   min-height: 90vh;
+   display: flex;
+   align-items: center;
+   padding: 0 80px;
+   position: relative;
+}
+
+.hero-text {
+   max-width: 550px;
+   background: linear-gradient(to right, rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+   padding: 30px 40px;
+   border-radius: 15px;
+   backdrop-filter: blur(3px);
+   margin-top: 100px; /* to ignore header overlap */
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #4a2e35;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Common Button Styles */
+
+.btn {
+    background-color: #a36b77;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8c4a5c;
+}
+
+/* 3. Shop our favorites section */
+
+.favorites {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.favorites h2{
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #3a2e32;
+    font-family: serif;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #f0e6e6;
+    border-radius: 12px;
+    width: 260px;
+    padding: 0px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Chobi jate card er baire na jay */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0px; /* charpaser border radius bad dite hbe */
+    margin-bottom: 0px;
+    display: block; /* cobir niche samanno faka jayga dur korte */
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    color: #3a2e32;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 20px 25px 20px; /* likhar charpase space dite */
+}
+
+/* Testimonial section */
+
+.testimonial {
+    background-color: #f7dfdf;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    font-size: 24px;
+    font-style: italic;
+    color: #4a3b40;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    font-family: cursive;
+    line-height: 1.4;
+}
+
+.testimonial cite {
+    font-size: 16px;
+    color: #8c4a5c;
+    font-weight: bold;
+}
+
+/* Call to action (CTA) section */
+
+.cta-section {
+    padding: 80px 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-box {
+    background-color: #b56576;
+    color: white;
+    width: 1000px;
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(181, 101, 118, 0.3);
+}
+
+.cta-text h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cta-text p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.btn-light {
+    background-color: oldlace;
+    color: #b56576;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #f0e6e6;
+}
+
+/* 6. Footer */
+
+footer {
+    background-color: #f7dfdf;
+    text-align: center;
+    padding: 30px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    display: flex;
+    border-top: 1px solid #f0e6e6;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* logo and nam majhkhane */
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a2e35;
+}
+
+footer > p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Dot boro korar jonno CSS */
+footer p .dot {
+    font-size: 20px; 
+    color: #8c4a5c;   
+    margin: 0 6px;    
+}
+
+.footer-logo img {
+    height: 45px; /* Your perfect dot size */
+    mix-blend-mode: multiply;
+}
