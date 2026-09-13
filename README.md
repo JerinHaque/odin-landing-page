@@ -24,7 +24,7 @@ A simple and elegant beauty landing page built with HTML5 and CSS3.
 
 ## Preview
 
-[Live Preview](YOUR-GITHUB-PAGES-LINK)
+[Live Preview](https://jerinhaque.github.io/odin-landing-page/)
 
 ## About
 
